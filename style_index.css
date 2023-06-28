@@ -1,13 +1,15 @@
 body{
+    padding: 40px;
     background-color: #F3F5FC;
     display: grid;
     grid-template-columns: 960px 480px;
-    height: 100vh;
-
+    height: 1024px;
+    width: 1440px;
+    box-sizing: border-box;
 }
 
 .inputPart{
-    background: lightgreen;
+
 
 }
 
