@@ -3,7 +3,7 @@ body{
     padding: 40px;
     background-color: #F3F5FC;
     display: grid;
-    grid-template-columns: 960px 480px;
+    grid-template-columns: 960px 400px;
     height: 1024px;
     width: 1440px;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body{
 }
 
 .textPart{
-    width: 760px;
+    width: 680px;
     height: 600px;
 
 }
@@ -28,7 +28,7 @@ body{
     color: #0A3871;
     background-color: #eaecf7;
     font-size: 32px;
-    width: 650px;
+    width: 680px;
     height: 550px;
     border: none;
     outline: none;
@@ -49,7 +49,7 @@ textarea::placeholder {
   }
 
 .buttonsPart{
-    height: 101px;
+    
 
 }
 
@@ -94,4 +94,33 @@ textarea::placeholder {
 
 .outputPart{
     background: white;
+    border-radius: 32px;
+    padding: 32px;
+}
+
+.outputPart img{
+    padding-top: 207px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.noTextPart{
+    margin-top: 32px;
+
+}
+
+.noTextPart h2{
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.noTextPart p{
+    text-align: center;
+    font-size: 16px;
+    color: #495057;
+
 }
