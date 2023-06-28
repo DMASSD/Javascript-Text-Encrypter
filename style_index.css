@@ -1,0 +1,16 @@
+body{
+    background-color: #F3F5FC;
+    display: grid;
+    grid-template-columns: 960px 480px;
+    height: 100vh;
+
+}
+
+.inputPart{
+    background: lightgreen;
+
+}
+
+.outputPart{
+    background: lightyellow;
+}
