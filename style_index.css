@@ -10,15 +10,29 @@ body{
 }
 
 .mainfuction{
-    margin-left: 240px;
+    margin-left: 200px;
+    margin-top: 78px;
+    box-sizing: border-box;
 
 }
 
 .textInput{
     color: #0A3871;
+    background-color: transparent;
     font-size: 32px;
+    width: 577px;
+    height: 48px;
+    border: none;
+    outline: none;
+
 }
 
+input::placeholder {
+    color: #0A3871;
+    opacity: 1;
+  }
+  
+
 .outputPart{
-    background: lightyellow;
+    background: white;
 }
