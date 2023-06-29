@@ -1,5 +1,8 @@
 body{
     font-family: 'Inter', sans-serif;
+}
+
+main{
     padding: 40px;
     background-color: #F3F5FC;
     display: grid;
@@ -47,11 +50,6 @@ textarea::placeholder {
     color: #0A3871;
     opacity: 1;
   }
-
-.buttonsPart{
-    
-
-}
 
 .Constraints{
     padding: 50px 0 16px 0;
@@ -124,3 +122,4 @@ textarea::placeholder {
     color: #495057;
 
 }
+
