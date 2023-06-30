@@ -12,32 +12,36 @@ main{
     box-sizing: border-box;
 }
 
+.inputPart{
+    display: grid;
+    grid-template-columns: 168px 792px;
+    box-sizing: border-box;
+}
+
 .mainfuction{
-    margin-left: 200px;
-    margin-top: 78px;
+    display: grid;
+    grid-template-rows: 694px 112px;
+    margin-top: 96px;
+    padding-right: 44px;
+    padding-bottom: 32px;
     box-sizing: border-box;
 
 }
 
-.inputTextPart{
-    width: 680px;
-    height: 600px;
-
-}
-
 .textInput  {
-    padding: 1em;
+    padding: 32px;
     font-family: 'Inter', sans-serif;
     color: #0A3871;
     background-color: #eaecf7;
     font-size: 32px;
-    width: 680px;
-    height: 550px;
+    width: 744px;
+    height: 680px;
     border: none;
     outline: none;
     resize: none;
     box-sizing: border-box;
     border-radius: 20px;
+    line-height: 48px;
   }
 
 .textInput textarea {
@@ -51,20 +55,33 @@ textarea::placeholder {
     opacity: 1;
   }
 
+.buttonsPart{
+    height: 112;
+  }
+
 .Constraints{
-    padding: 50px 0 16px 0;
+    padding: 8px 0 0 30px;
+    display: flex;
+    align-items: center;
 }
   
 .Constraints p{
-    opacity: 0.2;
+    opacity: 0.8;
+    font-size: 12px;
 
 }
 
 .Constraints img {
-    opacity: 0.8;
     float: left;
     margin-right: 8px;
 
+}
+
+.buttonContainer{
+    height: 88px;
+    display: flex;
+    align-items:end;
+    justify-content: center;
 }
 
 .buttonContainer button{
@@ -165,6 +182,7 @@ textarea::placeholder {
     border-width: 1px;
     border-radius: 24px;
     border-color: #0A3871;
+    background-color: #FFFFFF;
 }
 
 /* ELIMINAR ESTO UNA VEZ SE TERMINEN  LAS PRUEBAS */
