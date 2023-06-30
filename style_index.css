@@ -120,10 +120,6 @@ textarea::placeholder {
     margin-right: auto;
 }
 
-.noTextPart{
-    display: none;
-}
-
 .noTextText h2{
     margin-bottom: 16px;
     text-align: center;
@@ -185,13 +181,6 @@ textarea::placeholder {
     background-color: #FFFFFF;
 }
 
-/* ELIMINAR ESTO UNA VEZ SE TERMINEN  LAS PRUEBAS */
-
-.noTextText{
-    margin-top: 32px;
-
-}
-
-/* .noTextPart{
+.outputTextPart{
     display: none;
-} */
+}
