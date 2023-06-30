@@ -1,8 +1,21 @@
-function prueba(){
-    encryptButton.style.backgroundColor = "green";
-}
+// function hideNoTextElements(){
+//     noTextElements.style.display = "none";
+// }
 
-let encryptButton = document.querySelector(".encrypt-button");
-let decryptButton = document.querySelector(".decrypt-button");
+// function showNoTextElements(){
+//     noTextElements.style.display = "block";
+// }
 
-encryptButton.addEventListener("click", prueba);
+// let encryptButton = document.querySelector(".encrypt-button");
+// let decryptButton = document.querySelector(".decrypt-button");
+// let noTextElements = document.querySelector(".noTextPart");
+// let textInput = document.querySelector(".textInput");
+
+// textInput.addEventListener("input", function() {
+//     if (textInput.value === "") {
+//       showNoTextElements();
+//     }
+//   });
+
+// encryptButton.addEventListener("click", hideNoTextElements);
+// decryptButton.addEventListener("click", hideNoTextElements);
