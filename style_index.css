@@ -97,6 +97,7 @@ textarea::placeholder {
     background-color: #0A3871;
     color: #FFFFFF;
     margin-right: 24px;
+    transition: 0.1s all;    
 
 }
 
@@ -104,6 +105,23 @@ textarea::placeholder {
     border-width: 1px;
     background-color: #D8DFE8;
     color: #0A3871;
+    transition: 0.1s all;    
+
+}
+
+.encrypt-button:hover,
+.decrypt-button:hover{
+    transform: scale(1.04);
+
+}
+
+.encrypt-button:active{
+    background-color: #58708f;     
+
+}
+
+.decrypt-button:active{
+    background-color: #9ca1a8; 
 
 }
 
@@ -169,7 +187,10 @@ textarea::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #0A3871;
+
 }
+
 
 .copyTextButton{
     width: 336px;
@@ -179,6 +200,18 @@ textarea::placeholder {
     border-radius: 24px;
     border-color: #0A3871;
     background-color: #FFFFFF;
+    transition: 0.1s;
+
+}
+
+.copyTextButton:hover{
+    transform: scale(1.04);
+
+}
+
+.copyTextButton:active{
+    background-color: #58708f;     
+
 }
 
 .outputTextPart{

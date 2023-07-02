@@ -47,13 +47,19 @@ textInput.addEventListener("input", function() {
   });
 
 encryptButton.addEventListener("click", function() {
-    showTextElements();
-    resultText.value = encrypt(textInput.value);
+    if (textInput.value !== "") {
+        showTextElements();
+        resultText.value = encrypt(textInput.value);
+    }
+    
 });
 
 decryptButton.addEventListener("click", function() {
-    showTextElements();
-    resultText.value = decrypt(textInput.value);
+    if (textInput.value !== "") {
+        showTextElements();
+        resultText.value = decrypt(textInput.value);
+    }
+    
 });
 
 copyTextButton.addEventListener("click", function() {
