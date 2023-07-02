@@ -8,8 +8,21 @@ function showTextElements(){
     noTextElements.style.display = "none";
 }
 
+function serchUpperCaseOrAccent(str){
+    const keysUpperCaseOrAccent = /[A-Záéíóú]/;
+    return keysUpperCaseOrAccent.test(str);
+}
+    
+function constraintsToRed() {
+    constraints.style.color = "red";
+  
+    setTimeout(function() {
+      constraints.style.color = "";
+    }, 200);
+  }
+
 function encrypt(str) {
-    const keys = {
+    const keysEncrypt = {
         a: 'ai',
         e: 'enter',
         i: 'imes',
@@ -17,11 +30,11 @@ function encrypt(str) {
         u: 'ufat'
     };
   
-    return str.replace(/[aeiou]/g, match => keys[match.toLowerCase()]);
+    return str.replace(/[aeiou]/g, match => keysEncrypt[match.toLowerCase()]);
 }
 
 function decrypt(str) {
-    const keys = {
+    const keysDecrypt = {
         ai:     'a',
         enter:  'e',
         imes:   'i',
@@ -29,7 +42,7 @@ function decrypt(str) {
         ufat:   'u'
     };
   
-    return str.replace(/ai|enter|imes|ober|ufat/g, match => keys[match.toLowerCase()]);
+    return str.replace(/ai|enter|imes|ober|ufat/g, match => keysDecrypt[match.toLowerCase()]);
 }
 
 let encryptButton = document.querySelector(".encrypt-button");
@@ -39,6 +52,7 @@ let textElements = document.querySelector(".outputTextPart");
 let noTextElements = document.querySelector(".noTextPart");
 let textInput = document.querySelector(".textInput");
 let resultText = document.querySelector(".resultText");
+let constraints = document.querySelector(".Constraints");
 
 textInput.addEventListener("input", function() {
     if (textInput.value === "") {
@@ -47,7 +61,11 @@ textInput.addEventListener("input", function() {
   });
 
 encryptButton.addEventListener("click", function() {
-    if (textInput.value !== "") {
+    if (serchUpperCaseOrAccent(textInput.value)) {
+        constraintsToRed();
+    }
+
+    else if (textInput.value !== "") {
         showTextElements();
         resultText.value = encrypt(textInput.value);
     }
@@ -55,7 +73,11 @@ encryptButton.addEventListener("click", function() {
 });
 
 decryptButton.addEventListener("click", function() {
-    if (textInput.value !== "") {
+    if (serchUpperCaseOrAccent(textInput.value)) {
+        constraintsToRed();
+    }
+
+    else if (textInput.value !== "") {
         showTextElements();
         resultText.value = decrypt(textInput.value);
     }
