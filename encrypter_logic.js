@@ -52,7 +52,7 @@ let textElements = document.querySelector(".outputTextPart");
 let noTextElements = document.querySelector(".noTextPart");
 let textInput = document.querySelector(".textInput");
 let resultText = document.querySelector(".resultText");
-let constraints = document.querySelector(".Constraints");
+let constraints = document.querySelector(".constraints");
 
 textInput.addEventListener("input", function() {
     if (textInput.value === "") {
