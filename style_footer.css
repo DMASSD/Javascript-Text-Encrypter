@@ -38,6 +38,8 @@ footer img{
     display: flex;
     align-items: center;
     width: 33%;
+    justify-content: center;
+
 }
 
 .pageInfo p{
@@ -53,7 +55,35 @@ a:visited {
 
   /* Tablet styles */
 @media screen and (max-width: 820px) {
+
     footer {
-        display: none;
+        text-align: center;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: (3,106px);
+        color: lightgray;
+        width: 768px;
+
     }
+
+    footer > * {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    footer > *:not(:first-child)  {
+        border-top: 2px solid white;
+
+    } 
+
+    .contactModify{
+        justify-content: center;
+        
+    }
+
+    .pageInfo p{
+        text-align: center;
+
+    }
+
 }
