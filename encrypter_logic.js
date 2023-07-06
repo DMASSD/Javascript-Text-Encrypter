@@ -1,10 +1,10 @@
 function hideTextElements(){
-    textElements.style.display = "none";
+    textElements.classList.remove("show");
     noTextElements.style.display = "block";
 }
 
 function showTextElements(){
-    textElements.style.display = "block";
+    textElements.classList.add("show");
     noTextElements.style.display = "none";
 }
 

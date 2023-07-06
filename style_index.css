@@ -141,7 +141,7 @@ textarea::placeholder {
     padding: 32px;
 }
 
-.outputPart img{
+.noTextPart img{
     padding-top: 207px;
     display: block;
     margin-left: auto;
@@ -165,9 +165,8 @@ textarea::placeholder {
 
 .outputTextPart{
     height: 100%;
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
+
 }
 
 .textText{
@@ -228,19 +227,19 @@ textarea::placeholder {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 /* Tablet styles */
 @media screen and (max-width: 820px) {
 
     main{
         width: 768px;
-        height: 1174px;
-        padding: 40px;
+        height: auto;
         padding-top: 73px;
-        background-color: #F3F5FC;
-        display: grid;
         grid-template-columns: none;
-        grid-template-rows: 928px 133px;
-        box-sizing: border-box;
+        grid-template-rows: 928px auto;
         
     }
 
@@ -267,10 +266,7 @@ textarea::placeholder {
     }
 
     .textInput  {
-        font-family: 'Inter', sans-serif;
         padding: 10px;
-        color: #0A3871;
-        background-color: #eaecf7;
         width: 688px;
         height: 590px;
         padding-bottom: 10px;
@@ -280,22 +276,13 @@ textarea::placeholder {
         padding-bottom: 64px;
     }
 
-    .outputTextPart{
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 32px;
+    .noTextPart{
+        height: 69px;
     }
 
     .noTextPart img{
         display: none;
     }
 
-    .outputTextPart{
-        display: none;
-    }
-
-
-
-
+    
   }
