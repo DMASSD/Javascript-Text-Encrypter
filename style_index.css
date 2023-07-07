@@ -284,5 +284,23 @@ textarea::placeholder {
         display: none;
     }
 
+    .outputTextPart,
+    .textText,
+    .resultText
+    {
+        height: auto;
     
+    }
+
+    
+    .textText textarea{
+        height: max-content;
+
+    }
+
+    .buttonContainerOutput{
+        margin-top: 10px;
+    
+    }
+
   }

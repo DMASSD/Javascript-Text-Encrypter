@@ -8,6 +8,11 @@ function showTextElements(){
     noTextElements.style.display = "none";
 }
 
+function autoAdjustTextareaHeight() {
+    textarea.style.height = 'auto';
+    textarea.style.height = textarea.scrollHeight + 'px';
+}
+
 function serchUpperCaseOrAccent(str){
     const keysUpperCaseOrAccent = /[A-Záéíóú]/;
     return keysUpperCaseOrAccent.test(str);
@@ -19,7 +24,7 @@ function constraintsToRed() {
     setTimeout(function() {
       constraints.style.color = "";
     }, 200);
-  }
+}
 
 function encrypt(str) {
     const keysEncrypt = {
@@ -53,12 +58,14 @@ let noTextElements = document.querySelector(".noTextPart");
 let textInput = document.querySelector(".textInput");
 let resultText = document.querySelector(".resultText");
 let constraints = document.querySelector(".constraints");
+let textarea = document.querySelector('.textText textarea');
+
 
 textInput.addEventListener("input", function() {
     if (textInput.value === "") {
         hideTextElements();
     }
-  });
+});
 
 encryptButton.addEventListener("click", function() {
     if (serchUpperCaseOrAccent(textInput.value)) {
@@ -68,6 +75,8 @@ encryptButton.addEventListener("click", function() {
     else if (textInput.value !== "") {
         showTextElements();
         resultText.value = encrypt(textInput.value);
+        if (window.innerWidth <= 820){autoAdjustTextareaHeight();}
+        
     }
     
 });
@@ -80,9 +89,12 @@ decryptButton.addEventListener("click", function() {
     else if (textInput.value !== "") {
         showTextElements();
         resultText.value = decrypt(textInput.value);
+        if (window.innerWidth <= 820){autoAdjustTextareaHeight();}
     }
     
 });
+
+textarea.addEventListener('input', autoAdjustTextareaHeight);
 
 copyTextButton.addEventListener("click", function() {
     resultText.select();
