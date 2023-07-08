@@ -8,9 +8,14 @@ function showTextElements(){
     noTextElements.style.display = "none";
 }
 
-function autoAdjustTextareaHeight() {
-    textarea.style.height = 'auto';
-    textarea.style.height = textarea.scrollHeight + 'px';
+function autoAdjustTextOutputAreaHeight() {
+    textOutputArea.style.height = 'auto';
+    textOutputArea.style.height = textOutputArea.scrollHeight + 'px';
+}
+
+function autoAdjustTextInputAreaHeight() {
+    textInputArea.style.height = 'auto';
+    textInputArea.style.height = textInputArea.scrollHeight + 'px';
 }
 
 function serchUpperCaseOrAccent(str){
@@ -58,7 +63,8 @@ let noTextElements = document.querySelector(".noTextPart");
 let textInput = document.querySelector(".textInput");
 let resultText = document.querySelector(".resultText");
 let constraints = document.querySelector(".constraints");
-let textarea = document.querySelector('.textText textarea');
+let textOutputArea = document.querySelector('.textText textarea');
+let textInputArea = document.querySelector('.textInput');
 
 
 textInput.addEventListener("input", function() {
@@ -75,7 +81,7 @@ encryptButton.addEventListener("click", function() {
     else if (textInput.value !== "") {
         showTextElements();
         resultText.value = encrypt(textInput.value);
-        if (window.innerWidth <= 820){autoAdjustTextareaHeight();}
+        if (window.innerWidth <= 820){autoAdjustTextOutputAreaHeight();}
         
     }
     
@@ -89,15 +95,27 @@ decryptButton.addEventListener("click", function() {
     else if (textInput.value !== "") {
         showTextElements();
         resultText.value = decrypt(textInput.value);
-        if (window.innerWidth <= 820){autoAdjustTextareaHeight();}
+        if (window.innerWidth <= 820){autoAdjustTextOutputAreaHeight();}
     }
     
 });
 
-textarea.addEventListener('input', autoAdjustTextareaHeight);
+textInputArea.addEventListener('input', function (e) {
+    if (window.innerWidth <= 400){autoAdjustTextInputAreaHeight();}
+});
 
 copyTextButton.addEventListener("click", function() {
     resultText.select();
     document.execCommand("copy");
     resultText.blur();
 });
+
+window.addEventListener('beforeunload', function (e) {
+    if (textInputArea.value !== '') {
+        e.preventDefault();
+    }
+});;
+
+window.addEventListener("unload", function() {
+    textInputArea.value = "";
+  });

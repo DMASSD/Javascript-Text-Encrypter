@@ -364,8 +364,8 @@ textarea::placeholder {
 
     }
 
-    .textInput  {
-        padding: 5px 0px 0px 5px;
+    .textInput {
+        padding: 5px 0px 5px 5px;
         min-height: 290px;
         height: auto;
         width: 343px;
@@ -433,7 +433,7 @@ textarea::placeholder {
     
     }
 
-    /* .outputTextPart,
+    .outputTextPart,
     .textText,
     .resultText
     {
@@ -441,15 +441,19 @@ textarea::placeholder {
     
     }
 
-    
     .textText textarea{
         height: max-content;
 
     }
 
+    .outputTextPart{
+        width: 279px;
+    
+    }
+
     .buttonContainerOutput{
         margin-top: 10px;
     
-    } */
+    }
 
 }

@@ -91,8 +91,38 @@ a:visited {
   /* Phone styles */
   @media screen and (max-width: 400px) {
 
-    footer{
-        display: none;
+    footer {
+        text-align: center;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: (3,106px);
+        color: lightgray;
+        width: 375px;
+
+    }
+
+    footer > * {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    footer > *:not(:first-child)  {
+        border-top: 2px solid white;
+
+    } 
+
+    .contactModify{
+        justify-content: center;
+        display: block;
+    }
+
+    .contactModify img{
+        padding-bottom: 5px;
+    }
+
+    .pageInfo p{
+        text-align: center;
+
     }
 
   }
