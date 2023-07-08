@@ -244,7 +244,6 @@ textarea::placeholder {
     }
 
     .inputPart{
-        display: grid;
         grid-template-columns: none;
         grid-template-rows: 51px 878px;
 
@@ -304,3 +303,153 @@ textarea::placeholder {
     }
 
   }
+
+  /* Phone styles */
+@media screen and (max-width: 400px) {
+
+    main{
+        width: 375px;
+        height: auto;
+        padding: 16px;
+        padding-top: 0px;
+        padding-bottom: 32px;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        
+    }
+
+    .inputPart,
+    .logoContainer,
+    .mainfuction,
+    .inputTextPart,
+    .buttonsPart,
+    .constraints,
+    .buttonContainer,
+    .buttonContainer button
+    {
+        width: 343px;
+    }
+
+    .inputPart{
+        grid-template-columns: none;
+        grid-template-rows: 96px auto;
+
+    }
+
+    .logoContainer{
+        padding-top: 24px;
+
+    }
+
+    .logo{
+        display: none;
+        
+    }
+
+    .logoTablet{
+        display: block;
+    }
+
+    .mainfuction{
+        grid-template-rows: auto 182px;
+        margin-top: 56px;
+        padding: 0%;
+        margin-bottom: 64px;
+    
+    }
+
+    .inputTextPart{
+        min-height: 299px;
+        padding-bottom: 9px;
+
+    }
+
+    .textInput  {
+        padding: 5px 0px 0px 5px;
+        min-height: 290px;
+        height: auto;
+        width: 343px;
+    }
+
+    .buttonsPart{
+        padding-bottom: 0px;
+        display: grid;
+        grid-template-rows: 24px 158px;
+
+    }
+
+    .constraints{
+        padding: 0%;
+        padding-bottom: 8px;
+    }
+
+    .buttonContainer{
+        height: auto;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .buttonContainer button{
+        height: 67px;
+        font-size: 16px;
+        border-radius: 24px;
+        border-color: #0A3871;
+    
+    }
+
+    .encrypt-button{
+        margin-right: 0px; 
+    
+    }
+
+    .noTextPart{
+        height: 122px;
+
+    }
+
+    .noTextPart img{
+        display: none;
+    }
+
+    .noTextText h2{
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 28.8px;
+    
+    }
+    
+    .noTextText p{
+        padding: 0% 4px 0% 4px;
+        text-align: center;
+        font-size: 16px;
+        color: #495057;
+        line-height: 24px;
+    
+    }
+
+    /* .outputTextPart,
+    .textText,
+    .resultText
+    {
+        height: auto;
+    
+    }
+
+    
+    .textText textarea{
+        height: max-content;
+
+    }
+
+    .buttonContainerOutput{
+        margin-top: 10px;
+    
+    } */
+
+}
